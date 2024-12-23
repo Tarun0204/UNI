@@ -44,6 +44,7 @@ const DishItem = ({dishDetails}) => {
           <p className="dish-price">
             {dishCurrency} {dishPrice}
           </p>
+          <p className="dish-calories">{dishCalories} calories</p>
           <p className="dish-para">{dishDescription}</p>
           {dishAvailability && renderButtonsContainer()}
           {!dishAvailability && <p className="not-available">Not available</p>}
@@ -56,9 +57,6 @@ const DishItem = ({dishDetails}) => {
             </button>
           )}
         </div>
-      </div>
-      <div className="center">
-        <p className="dish-calories">{dishCalories} calories</p>
       </div>
       <div className="right">
         <img className="dish-image" alt={dishName} src={dishImage} />
